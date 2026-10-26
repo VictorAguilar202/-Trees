@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173d35">
+    <title>Timber Triage | Archaeology Field Guide</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Timber Triage home">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span>FIELDNOTE <span class="brand-divider">/</span> 07</span>
+      </a>
+      <span class="topbar-label">CONSERVATION FIELD GUIDE</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> INTERACTIVE FIELD GUIDE</p>
+          <h1>Timber from<br><em>the deep.</em></h1>
+          <p class="hero-intro">
+            A decision-tree field guide for the first observations of
+            waterlogged archaeological wood.
+          </p>
+          <div class="hero-meta">
+            <span><strong>SUBJECT</strong> Marine archaeology</span>
+            <span><strong>METHOD</strong> Binary decision tree</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of submerged timber">
+          <div class="waterline"></div>
+          <div class="artifact artifact-one"></div>
+          <div class="artifact artifact-two"></div>
+          <div class="artifact artifact-three"></div>
+          <div class="bubble bubble-one"></div>
+          <div class="bubble bubble-two"></div>
+          <div class="art-caption">RECOVERED MATERIAL / EST. 1712</div>
+          <span class="art-crosshair crosshair-one"></span>
+          <span class="art-crosshair crosshair-two"></span>
+        </div>
+      </section>
+
+      <section class="study-layout" aria-label="Timber condition guide">
+        <div class="guide-column">
+          <div class="section-heading">
+            <span class="section-index">01</span>
+            <div>
+              <p class="eyebrow">THE APPROACH</p>
+              <h2>Why a tree?</h2>
+            </div>
+          </div>
+          <p class="study-copy">
+            Waterlogged ship timbers can change quickly when their environment
+            changes. This small decision tree organizes a few initial
+            observations into a clear next step—without pretending to replace
+            conservation expertise.
+          </p>
+          <div class="note-card">
+            <span class="note-icon" aria-hidden="true">i</span>
+            <p><strong>Important note</strong><br>
+              This guide is not a conservation diagnosis. Do not treat, dry,
+              or clean archaeological material based only on these
+              observations.
+            </p>
+          </div>
+          <div class="tree-card">
+            <div class="tree-card-heading">
+              <span class="eyebrow">STRUCTURE MAP</span>
+              <span class="tree-count">4 QUESTIONS · 5 OUTCOMES</span>
+            </div>
+            <div id="tree-map" class="tree-map" aria-label="Decision tree map">
+              <p class="loading">Loading the decision tree…</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="decision-column">
+          <div class="decision-topline">
+            <span class="section-index">02</span>
+            <span class="eyebrow">FOLLOW THE EVIDENCE</span>
+            <span id="step-label" class="step-label">START</span>
+          </div>
+          <div id="decision-card" class="decision-card" aria-live="polite">
+            <div class="compass" aria-hidden="true">N</div>
+            <p class="eyebrow">A FIELDNOTE DECISION TREE</p>
+            <h2>Begin with what you can observe.</h2>
+            <p class="decision-description">
+              Answer a short sequence of yes-or-no questions to follow a path
+              through the tree.
+            </p>
+            <button id="start-button" class="primary-button" type="button">
+              Start assessment <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div id="path-panel" class="path-panel" hidden>
+            <div class="path-heading">
+              <span class="eyebrow">YOUR OBSERVATION PATH</span>
+              <button id="reset-button" class="text-button" type="button">Start over</button>
+            </div>
+            <ol id="path-list" class="path-list"></ol>
+          </div>
+          <p class="footer-note">
+            <span class="footer-star" aria-hidden="true">✳</span>
+            A decision tree organizes observations into clear next steps.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <span>FIELDNOTE / ARCHAEOLOGICAL MATERIALS</span>
+      <span>CONSERVATION FIELD GUIDE · 2026</span>
+    </footer>
+  </body>
+</html>
